@@ -1,11 +1,11 @@
 Summary:	A system documentation reader from the GNOME project
 Name:		yelp
-Version:	3.8.1
+Version:	3.10.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp/3.8/%{name}-%{version}.tar.xz
-# Source0-md5:	716581c68c0f52deb73a84820dae5795
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp/3.10/%{name}-%{version}.tar.xz
+# Source0-md5:	8cc3ec6fe168a441d31fe6464286e0c8
 URL:		http://projects.gnome.org/yelp/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -13,7 +13,7 @@ BuildRequires:	bzip2-devel
 BuildRequires:	gettext-devel
 BuildRequires:	gnome-doc-utils
 BuildRequires:	gtk-doc
-BuildRequires:	gtk+3-webkit-devel
+BuildRequires:	gtk+3-webkit-devel >= 2.2.0
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires:	libtool
@@ -21,13 +21,13 @@ BuildRequires:	libxml2-devel
 BuildRequires:	libxslt-devel
 BuildRequires:	xz-devel
 BuildRequires:	pkg-config
-BuildRequires:	yelp-xsl >= 3.8.1
+BuildRequires:	yelp-xsl >= 3.10.0
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	glib-gio-gsettings
 Requires:	%{name}-libs = %{version}-%{release}
 Requires:	gnome-icon-theme
 Requires:	libxslt-progs
-Requires:	yelp-xsl >= 3.8.1
+Requires:	yelp-xsl >= 3.10.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -62,7 +62,7 @@ yelp library API documentation.
 %setup -q
 
 # kill gnome common deps
-sed -i -e 's/GNOME_COMPILE_WARNINGS.*//g'	\
+%{__sed} -i -e 's/GNOME_COMPILE_WARNINGS.*//g'	\
     -i -e 's/GNOME_MAINTAINER_MODE_DEFINES//g'	\
     -i -e 's/GNOME_COMMON_INIT//g'		\
     -i -e 's/GNOME_CXX_WARNINGS.*//g'		\
