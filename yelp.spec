@@ -1,18 +1,18 @@
 Summary:	A system documentation reader from the GNOME project
 Name:		yelp
-Version:	3.10.2
+Version:	3.12.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp/3.10/%{name}-%{version}.tar.xz
-# Source0-md5:	26b380fad5e8e0414db6ebc384493505
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp/3.12/%{name}-%{version}.tar.xz
+# Source0-md5:	02f0383b02960766ea46059b9a02cf85
 URL:		http://projects.gnome.org/yelp/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	bzip2-devel
 BuildRequires:	gettext-devel
 BuildRequires:	gtk-doc
-BuildRequires:	gtk+3-webkit-devel >= 2.2.0
+BuildRequires:	gtk+3-webkit-devel >= 2.4.0
 BuildRequires:	intltool
 BuildRequires:	itstool
 BuildRequires:	libtool
@@ -20,13 +20,13 @@ BuildRequires:	libxml2-devel
 BuildRequires:	libxslt-devel
 BuildRequires:	xz-devel
 BuildRequires:	pkg-config
-BuildRequires:	yelp-xsl >= 3.10.0
+BuildRequires:	yelp-xsl >= 3.12.0
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	glib-gio-gsettings
 Requires:	%{name}-libs = %{version}-%{release}
 Requires:	gnome-icon-theme
 Requires:	libxslt-progs
-Requires:	yelp-xsl >= 3.10.0
+Requires:	yelp-xsl >= 3.12.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -86,6 +86,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %find_lang %{name}
 
