@@ -1,11 +1,11 @@
 Summary:	A system documentation reader from the GNOME project
 Name:		yelp
-Version:	3.12.0
+Version:	3.14.0
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
-Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp/3.12/%{name}-%{version}.tar.xz
-# Source0-md5:	02f0383b02960766ea46059b9a02cf85
+Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp/3.14/%{name}-%{version}.tar.xz
+# Source0-md5:	e98603aecc00a350d7b0123ac1c8f349
 URL:		http://projects.gnome.org/yelp/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -20,13 +20,13 @@ BuildRequires:	libxml2-devel
 BuildRequires:	libxslt-devel
 BuildRequires:	xz-devel
 BuildRequires:	pkg-config
-BuildRequires:	yelp-xsl >= 3.12.0
+BuildRequires:	yelp-xsl >= 3.14.0
 Requires(post,postun):	desktop-file-utils
 Requires(post,postun):	glib-gio-gsettings
 Requires:	%{name}-libs = %{version}-%{release}
 Requires:	gnome-icon-theme
 Requires:	libxslt-progs
-Requires:	yelp-xsl >= 3.12.0
+Requires:	yelp-xsl >= 3.14.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
