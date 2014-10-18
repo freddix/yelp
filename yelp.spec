@@ -1,11 +1,11 @@
 Summary:	A system documentation reader from the GNOME project
 Name:		yelp
-Version:	3.14.0
+Version:	3.14.1
 Release:	1
 License:	GPL v2
 Group:		X11/Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/yelp/3.14/%{name}-%{version}.tar.xz
-# Source0-md5:	e98603aecc00a350d7b0123ac1c8f349
+# Source0-md5:	1e2c282183761904c507c7efa6be7037
 URL:		http://projects.gnome.org/yelp/
 BuildRequires:	autoconf
 BuildRequires:	automake
